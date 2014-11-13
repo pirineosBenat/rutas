@@ -1,33 +1,19 @@
+<!-- 
+TODO 
+	quitar bordes				DONE
+	sombras como en principal	DONE
+	iconos en ficha				DONE
+	responsive mejor
+	mapa ruta google
+	div contenedor dejar 2 columnas blancas a los lados 	DONE
+	-->
+
 <!doctype html>
 <html  lang="es">
 	<head>
 		<meta charset="utf-8"/>
 		<title>Rutas</title>
-		<link rel="stylesheet" type="text/css" href="prueba.css">
-
-        <!--Esta siguiente linea es para coger de la nube un tipo de fuente estrecha-->
-        <!--<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script>
-            $(function() {
-                var pull        = $('#pull');
-                    menu        = $('nav ul');
-                    menuHeight  = menu.height();
-
-                $(pull).on('click', function(e) {
-                    e.preventDefault();
-                    menu.slideToggle();
-
-                });
-
-                $(window).resize(function(){
-                    var w = $(window).width();
-                    if(w > 320 && menu.is(':hidden')) {
-                        menu.removeAttr('style');
-                    }
-                });
-            });
-        </script>
+		<link rel="stylesheet" type="text/css" href="rutas.css">
 
 
 	</head>
@@ -48,7 +34,7 @@
         </div>
 
         <ul class="clearfix" id="botoiak">
-            <li><a href="#">Inicio</a></li>
+            <li><a href="principal.html">Inicio</a></li>
             <li><a href="#">Galeria</a></li>
             <li><a href="ingreso.html">Ingreso</a></li>
             <li><a href="#">Contacto</a></li>
@@ -71,103 +57,114 @@
     <section id="contenedor">
     	<section id="ficha">
     		<div id="titulo">
-    			<h1>RUTA DE LOS TRES INFIERNOS</h1>
+    			<img src="img/iconos/ruta.png" alt="ruta"><h1>RUTA</h1>
+    			<h1>LOS TRES INFIERNOS</h1><br /><br />
     		</div>
-   			 <div id = "info">
-			<p>
-				<b>Dificultad:</b> Alta 
-				<b>Desnivel acumulado:</b> +753m | +844m / -1.597m
-				<b>Distancia total:</b> 16,6 km
-				<b>Tiempo total efectivo:</b> 2:45h
-			</p>
-			<p>
-				<b>Altitud máxima:</b> 3.082m 
-				<b>Altitud mínima:</b> 1.637
-				<b>Punto de salida / llegada:</b> Refugio Casa de Piedra
-				<b>Población más cercana:</b> Panticosa
-			</p>
-			</div>
+   			 <table id = "info">
+   			 	<tr>
+   			 		<td><img src="img/iconFicha/dificultad.jpg" alt="dif"></td>
+   			 		<td><b>Dificultad:</b> Alta</td>
+   			 		<td><img src="img/iconFicha/desnivel.jpg" alt="des"></td>
+   			 		<td><b>Desnivel acumulado:</b> +753m | +844m / -1.597m</td>
+   			 	</tr>
+				<tr>
+					<td><img src="img/iconFicha/distancia.jpg" alt="dis"></td>
+					<td><b>Distancia total:</b> 16,6 km</td>
+					<td><img src="img/iconFicha/tiempo.jpg" alt="tiem"></td>
+					<td><b>Tiempo total efectivo:</b> 2:45h</td>
+				</tr>
+				<tr>
+					<td><img src="img/iconFicha/altitudMax.jpg" alt="max"></td>
+					<td><b>Altitud máxima:</b> 3.082m </td>
+					<td><img src="img/iconFicha/altitudMin.jpg" alt="min"></td>
+					<td><b>Altitud mínima:</b> 1.637</td>
+				</tr>
+				<tr>
+					<td><img src="img/iconFicha/salida.jpg" alt="pto"></td>
+					<td><b>Punto de salida / llegada:</b> Refugio Casa de Piedra</td>
+					<td><img src="img/iconFicha/pueblo.jpg" alt="pob"></td>
+					<td><b>Población más cercana:</b> Panticosa</td>
+				</tr>
+			</table>
 			
 			<br />
-			<div id="mapa">
-				<p>
-					<img src="recorrido/mapa.jpg" alt="mapa" />	
-				</p>
+			<div class="mapa">
+				<iframe src="https://www.google.com/maps/d/embed?mid=zr7yC93aAn1g.kik4jT4_KVtw" width="640" height="480"></iframe>
 			</div>
 		</section>
 	<div id = "desc">
 		
-		<h2>RECORRIDO 1<sup>er</sup> DÍA</h2>
+		<h1>RECORRIDO 1<sup>er</sup> DÍA</h1>
 		<p>La ruta comienza en el  <b>refugio Casa de Piedra (0:00h - 1.637m)</b>, un refugio guardado (propiedad de la FAM, 35 plazas, teléfono: 974 48 75 71; abierto durante todo el año) que está situado justo al lado del conocido balneario de Panticosa. Nos encontramos en un punto de partida idóneo para hacer excursiones por esta magnífica zona del Pirineo aragonés. Es por ello que durante los meses de verano y la mayoría de fines de semana del año encontramos aquí una gran afluencia de gente. </p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-01.jpg" alt="01" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-01.jpg" alt="01" />
 		<p id="pie">El emblemático refugio Casa de Piedra, en la zona de Baños de Panticosa.</p><br />
 		<p>Desde el lado derecho del refugio, tomamos el sendero GR-11 (marcas rojas y blancas) que sube haciendo zigzags en dirección N para ganar altitud y superar la muralla septentrional del valle del río Caldarés. El camino está bien señalizado y no tiene pérdida. Después de unos minutos llegamos al <b>mirador del balneario (0:10h - 1.725m)</b>, desde donde disfrutamos de unas buenas vistas de todo el complejo de Baños de Panticosa y de las montañas que lo rodean. </p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-03.jpg" alt="03" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-03.jpg" alt="03" />
 		<p id="pie">Mirador del balneario.</p><br />
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-04.jpg" alt="04" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-04.jpg" alt="04" />
 		<p id="pie">Vistas del complejo termal y del lago de Baños de Panticosa.</p><br />
 		<p>A medida que vamos ganando desnivel vemos más claramente, a nuestra izquierda (O), el pico de las Argualas y el Garmo Negro, que es uno de los tresmiles más asequibles y ascendidos del Pirineo.</p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-05.jpg" alt="05" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-05.jpg" alt="05" />
 		<p id="pie">El pico de las Argualas y el Garmo Negro.</p><br />
 		<p>Durante este primer tramo de la ruta, pasamos cerca de algunas cascadas que hacen que el camino sea bastante entretenido. Las aguas del río bajan con fuerza por el barranco que en algunos puntos es muy estrecho</p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-06.jpg" alt="06" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-06.jpg" alt="06" />
 		<p id="pie">Cascada del río Caldarés.</p><br />
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-07.jpg" alt="07" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-07.jpg" alt="07" />
 		<p id="pie">Zona de aguas tranquilas del río Caldarés</p><br />
 		<p>Pasamos por un bonito llano donde es habitual encontrar excursionistas que hacen un descanso antes de continuar el camino de subida. Si hacemos la ruta en verano, seguro que coincidiremos con familias que hacen el recorrido hasta los embalses de Bachimaña o hasta los ibones Azules</p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-11.jpg" alt="11" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-11.jpg" alt="11" />
 		<p id="pie">Un bonito llano.</p><br />
 		<p>Cuando llevamos aproximadamente una hora de camino empezamos a ver, en dirección N, unas imponentes paredes de roca que se levantan verticalmente delante de nosotros: nos estamos aproximando a la zona conocida como la <b>Cuesta del Fraile.</b></p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-12.jpg" alt="12" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-12.jpg" alt="12" />
 		<p id="pie">Subiendo hacia la Cuesta del Fraile.</p><br />
 		<p>A medida que nos vamos acercando a la Cuesta del Fraile, observamos las numerosas cascadas de agua que bajan por la roca granítica. El sendero pedregoso se aleja del valle por su flanco orográfico derecho, es decir, bordeamos las paredes por la izquierda (lado NO). La subida se acentúa y salva el desnivel haciendo fuertes zigzags. Pasamos muy cerca de la cascada principal, conocida como la <b>cascada del Fraile (1:05h - 2.040m).</b></p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-15.jpg" alt="15" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-15.jpg" alt="15" />
 		<p id="pie">Cascada del Fraile</p><br />
 		<p>Dejamos la cascada atrás y continuamos avanzando haciendo lazadas. Llegamos a un punto donde el camino gira hacia la derecha (NE) y la pendiente disminuye. Finalmente llegamos al  <b>embalse de Bachimaña Bajo (1:30h - 2.150m). </b></p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-17.jpg" alt="17" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-17.jpg" alt="17" />
 		<p id="pie">Embalse de Bachimaña Bajo.</p><br />
 		<p>Si queremos, podemos acercarnos hasta el <b>refugio de Bachimaña</b> (propiedad FAM, teléfono: 697 12 69 67, abierto durante todo el año) que está situado justo al otro lado de la presa. Para hacerlo, hay que dejar el GR-11 y seguir el sendero que bordea el embalse por el S, cruzando la presa, y luego subir la colina donde está ubicado. Hacer una parada en este refugio es una buena alternativa si queremos recuperar fuerzas antes de continuar la excursión hacia los ibones Azules. </p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-18.jpg" alt="18" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-18.jpg" alt="18" />
 		<p id="pie">Refugio de Bachimaña.</p><br />
 		<p>Desde la presa del embalse de Bachimaña Bajo, continuamos nuestra ruta subiendo por el GR-11 en dirección NE. Bordeamos la masa de agua por la izquierda (derecha orográfica). Las vistas que tenemos si miramos atrás son magníficas: el embalse de Bachimaña Bajo, el refugio y las montañas al fondo</p>
 		<p>Después de unos minutos, llegamos a la presa del  <b>embalse de Bachimaña Alto (1:45h - 2.220m)</b>, que es de mayor tamaño que el de Bachimaña Bajo. Bordeamos el embalse por la izquierda y contemplamos este bonito paraje. Unas rocas sobresalen en medio del embalse y forman una isla curiosa. Al fondo, en dirección N, destacan el pico de Marcadau, y el puerto de Panticosa (o de Marcadau) que une la zona de Panticosa (Aragón) con la zona francesa de Cauterets (Altos Pirineos).</p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-21.jpg" alt="21" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-21.jpg" alt="21" />
 		<p id="pie">Embalse de Bachimaña Alto.</p><br />
 		<p>El camino gira en dirección NO y avanza por terreno llano, sin desnivel, unos metros por encima de las aguas del lago</p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-22.jpg" alt="22" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-22.jpg" alt="22" />
 		<p id="pie">Bordeamos el lago hasta su extremo noroccidental.</p><br />
 		<p>Una vez llegamos a la cabecera noroccidental del embalse de Bachimaña Alto, tomamos el camino que sale hacia la izquierda (en dirección O) y remonta el arroyo que baja de los ibones Azules. Dejamos atrás a la derecha el camino que va hacia el puerto de Marcadau y hacia el ibón de Bramatuero. Estamos en una zona llana y herbosa donde el agua avanza suavemente formando bonitos meandros que hay que cruzar. En primavera, el arroyo que baja de los ibones Azules puede llevar un volumen de agua muy considerable y puede cubrir completamente este llano, por lo que puede ser complicado cruzarlo sin mojarse los pies. Al fondo, en el extremo occidental de este llano, vemos la bonita cascada de los <b>ibones Azules.</b></p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-25.jpg" alt="25" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-25.jpg" alt="25" />
 		<p id="pie">Cascada de los Azules.</p><br />
 		<p>Subimos por un camino evidente y pasamos junto a la cascada de los Azules. Al fondo, delante, se nos abre un panorama grandioso: ¡los tres picos del Infierno y la Marmolera nos dan la bienvenida! Se pueden apreciar perfectamente los diferentes colores que presenta la roca.</p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-27.jpg" alt="26" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-27.jpg" alt="26" />
 		<p id="pie">Los tres Infiernos delante nuestro</p><br />
 		<p>Superamos una zona de bloques de roca y llegamos al  <b>ibón Azul Inferior (2:30h - 2.350m)</b>, situado en un entorno maravilloso: la silueta de los Infiernos se refleja en el agua cristalina del lago. Justo al inicio del ibón, en la parte derecha, aún podemos observar los bloques de hormigón que sostenía el antiguo refugio metálico de los ibones Azules. </p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-28.jpg" alt="27" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-28.jpg" alt="27" />
 		<p id="pie">Ibón Azul Inferior</p><br />
 		<p>Cruzamos el arroyo que baja hacia Bachimaña justo por el desagüe del ibón y lo bordeamos por la derecha (margen izquierdo hidrográfico). Superamos los pocos metros de desnivel que separan el ibón Inferior del Superior</p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-30.jpg" alt="28" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-30.jpg" alt="28" />
 		<p id="pie">Subiendo hacia el ibón Azul Superior</p><br />
 		<p>Pronto llegamos al  <b>ibón Azul Superior (2:45h - 2.390m)</b>, un lago de aguas cristalinas y tranquilas situado a los pies de los Infiernos y del pico de Piedrafita. Bordeamos el lago por la derecha, donde hay varias zonas llanas y herbosas donde podremos acampar y hacer vivac. </p>
 		<br />
-		<img src="recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-34.jpg" alt="34" />
+		<img src="img/recorrido/circular-picos-del-infierno-desde-el-balneario-de-panticosa-34.jpg" alt="34" />
 		<p id="pie">Ibón Azul Superior</p>
 	</div>
     	

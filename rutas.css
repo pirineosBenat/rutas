@@ -158,10 +158,9 @@ nav li#buscador2{
 
 
 #contenedor{
-    /*border: 2px solid blue;*/
     position: absolute;
     top: 320px;
-    width: 100%;
+    width:98%;
     min-width: 200px;
     padding-top: 20px;
     display: -webkit-box;
@@ -170,83 +169,70 @@ nav li#buscador2{
     height: 100%;
     -webkit-box-align:center; 
     text-align: center;
+    max-width: 98%;
 }
 
 #ficha {
-	border: 1px solid grey;
-	/*background: orange;*/
-	-webkit-border-radius: 10px;
-	-webkit-box-shadow: rgba(110,110,110,0.7) 10px 10px 10px;
+	/*-webkit-box-shadow: 0px 0px 35px 0px rgba(204,204,204,1);*/
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-box-pack: center;
-	/*-webkit-box-direction: reverse;*/
 	height: 100px;
-	/*-webkit-box-align: center;*/
 	-webkit-box-align: center;
-	width: 98%;
+	width: 66%;
 	height: 720px;
 	position: absolute;
+	font-family: courier, 'courier new', monospace;
+	margin: 0 auto;
+    left: 0;
+    right: 0;
 }
+
+
+
 #titulo {
 	padding: 20px;
 	margin: 10px;
 	width: 98%;
-	
 	-webkit-box-flex: 1;
-	border: 1px solid grey;
-	/*background: orange;*/
-	-webkit-border-radius: 10px;
-	-webkit-box-shadow: rgba(110,110,110,0.7) 10px 10px 10px;
+	/*-webkit-box-shadow: 0px 0px 35px 0px rgba(204,204,204,1);*/
 	position: relative;
+	color: #bf782c;
+	font-size: 24px;
+	font-family: courier, 'courier new', monospace;
 }
+
 #info {
 	padding: 20px;
 	margin: 10px;
-	width: 98%;
-	
+	max-width: 100%;
 	-webkit-box-flex: 1;
-	height: 50px;
-	border: 1px solid grey;
-	/*background: orange;*/
-	-webkit-border-radius: 10px;
-	-webkit-box-shadow: rgba(110,110,110,0.7) 10px 10px 10px;
+	height: auto;
+	/* -webkit-box-shadow: 0px 0px 35px 0px rgba(204,204,204,1);*/
 	position: relative;
-}
-#mapa{
-	padding: 20px;
-	margin: 10px;
-	width: 98%;
-	
-	-webkit-box-flex: 1;
-	border: 1px solid grey;
-	/*background: orange;*/
-	-webkit-border-radius: 10px;
-	-webkit-box-shadow: rgba(110,110,110,0.7) 10px 10px 10px;
-	height: 320px;
-	position: relative;
-	
+	text-align: left;
 }
 #desc{
 	position: absolute;
-	top: 800px;
+	top: 900px;
 	left: 0px;
-	font-family: sans-serif;
+	font-family: courier, 'courier new', monospace;
 	font-size: 14px;
 }
 #pie{
-	font-family: sans-serif;
+	font-family: courier, 'courier new', monospace;
 	font-size: 12px;
 	color: grey;
 	
 }
 
 
+
 /**********************Pie de pagina************************/
 footer{
     position: absolute;
     top:250%;
-    margin-top: 9200px;
+    margin-top: 9600px;
     width: 100%;
     height: 75px;
     background-color: #C0C0C0;
@@ -369,42 +355,33 @@ footer section img{
         #desc{
         	display: none;
         }
+        .mapa{
+			padding-bottom: 56.25%;
+			overflow: hidden;
+		}
+		.mapa iframe{
+			position: absolute;
+			left: -10px;
+			top: 650px;
+			min-width: 200px;
+			width: 100%;
+			height: auto;
+		}
+        #info{
+        	position: relative;
+        	left: -70px;
+        }
 
         /*cambiamos propiedades del footer*/
         footer{
             height: 50px;
              background-color: #000;
-             margin-top: -700px;
+             margin-top: -500px;
+             max-width: 100%;
         }
 
         .copy{
             display: none;
         }
 
-        /*****************parte central responsive*************/
-
-        /* .contenedor {
-        position: absolute;
-        top: 100px;
-        }
-        #colum1 {
-            float: left;
-            width: 0%;
-        }
-        #colum2 {
-            float: right;
-            width: 30%;
-        }
-        #colum3 {
-            float: right;
-            width: 30%;
-        }
-        #colum4{
-            float: right;
-            width: 30%;
-        }
-        #colum5 {
-            float: right;
-            width: 0%;
-        }*/
 }
